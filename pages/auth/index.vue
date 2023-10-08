@@ -5,11 +5,11 @@
         <Form @submit="onSubmit">
           <div class="flex flex-col mb-2">
             <UInput type="text" v-bind="name" label="Login" placeholder="Login" />
-            <p class="text-red-600 font-semibold">{{ errors.name }}</p>
+            <p class="text-red-400 text-sm">{{ errors.name }}</p>
           </div>
           <div class="flex flex-col">
             <UInput type="password" v-bind="key" label="Key" placeholder="Hasło"/>
-            <p class="text-red-600 font-semibold">{{ errors.key }}</p>
+            <p class="text-red-400 text-sm">{{ errors.key }}</p>
           </div>
           <div class="mt-4">
             <UButton type="submit" block>Prześlij</UButton>
@@ -58,10 +58,10 @@ const onSubmit = handleSubmit(async (values) => {
     const data = loginServerResponse.parse(response)
 
     if(data.success) {
-      toast.success(data.message);
+      toast.success(data.message)
       return router.push('/')
     } else {
-      toast.error(data.message);
+      toast.error(data.message)
     }
   })
 })

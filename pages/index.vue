@@ -6,7 +6,6 @@
     <div v-if="user">
       Jesteś zalogowany jako <span class="font-semibold">{{ user.name }}</span>
     </div>
-    <h1 class="bg-amber-600" v-else>Jesteś nikim</h1>
   </div>
 </template>
 

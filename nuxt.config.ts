@@ -13,6 +13,10 @@ export default defineNuxtConfig({
       '@nuxt/ui',
   ],
   ui: {
-    icons: ['mdi']
+    icons: ['mdi'],
+    // @ts-ignore
+    notifications: {
+      position: 'top-0 right-0'
+    }
   }
 })
