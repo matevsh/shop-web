@@ -1,22 +1,18 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  css: ['~/main.css'],
+  css: ["~/main.css"],
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
-    }
+    },
   },
-  modules: [
-      '@pinia/nuxt',
-      '@nuxt/ui',
-  ],
+  modules: ["@pinia/nuxt", "@nuxt/ui"],
   ui: {
-    icons: ['mdi'],
-    // @ts-ignore
-    notifications: {
-      position: 'top-0 right-0'
-    }
-  }
-})
+    icons: ["mdi"],
+  },
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+  },
+});
